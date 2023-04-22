@@ -98,7 +98,7 @@ class Todo {
     try {
       const { id } = req.params;
 
-      await Model.deleteOne(id);
+      await Model.findByIdAndDelete(id);
 
       return res.status(200);
     } catch (e) {
